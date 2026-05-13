@@ -1,63 +1,53 @@
-# Astro Starter Kit: Blog
+🚀 Mi Blog - Astro + TinaCMS
+Este es mi blog personal desarrollado con Astro, enfocado en compartir contenido sobre programación y tecnología. El proyecto utiliza TinaCMS como sistema de gestión de contenidos (CMS) para permitir una edición visual y dinámica de los artículos.
 
-```sh
-npm create astro@latest -- --template blog
-```
+🛠️ Tecnologías utilizadas
+Astro v6.3.1: Framework web diseñado para la velocidad, utilizado para la estructura principal del blog.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+TinaCMS: Implementado como panel de administración local para la gestión de archivos Markdown y MDX.
 
-Features:
+TypeScript: Lenguaje utilizado para la configuración y tipado del proyecto.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+Pure CSS: Utilizado para mantener el control total sobre la estructura visual y el diseño responsive.
 
-## 🚀 Project Structure
+Sharp: Motor de procesamiento de imágenes para optimizar los recursos visuales del blog.
 
-Inside of your Astro project, you'll see the following folders and files:
+📁 Estructura del Proyecto
+El proyecto ha sido organizado fuera de servicios de sincronización automática para evitar conflictos de permisos, operando directamente desde C:\proyectos.
 
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+src/content/blog/: Ubicación de los archivos de contenido gestionados por el CMS.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+src/assets/: Directorio centralizado para imágenes y recursos multimedia procesados por Astro.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+tina/: Configuración del esquema y campos personalizados del administrador.
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+public/admin/: Archivos necesarios para el acceso al panel de edición visual.
 
-Any static assets, like images, can be placed in the `public/` directory.
+⚙️ Configuración del Entorno
+Requisitos previos
+Node.js: Versión >=22.12.0.
 
-## 🧞 Commands
+Terminal: Se recomienda el uso de Git Bash integrado en VS Code para un entorno de desarrollo más fluido en Windows.
 
-All commands are run from the root of the project, from a terminal:
+Instalación de dependencias
+Para evitar errores de compilación de binarios locales en Windows, las herramientas de TinaCMS se instalaron ignorando scripts automáticos problemáticos:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Bash
+npm install @tinacms/cli@latest tinacms@latest --save-dev --ignore-scripts
+🚀 Comandos Principales
+En el archivo package.json se configuraron scripts personalizados para sincronizar ambos motores de desarrollo:
 
-## 👀 Want to learn more?
+Desarrollo: npm run dev (Inicia TinaCMS y el servidor de Astro simultáneamente).
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Construcción: npm run build (Genera el sitio estático optimizado).
 
-## Credit
+Panel de Administración: Accesible localmente en http://localhost:4321/admin/index.html una vez iniciado el servidor.
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+✍️ Gestión de Contenido
+El administrador de TinaCMS está configurado con campos específicos para facilitar la publicación:
+
+Título y Fecha: Gestión de metadatos de publicación.
+
+Imagen de Portada: Carga directa a src/assets para optimización automática.
+
+Editor Rich-text: Para redactar el cuerpo del post con formato dinámico.
