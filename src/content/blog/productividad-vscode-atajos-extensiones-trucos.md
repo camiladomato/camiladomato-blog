@@ -1,7 +1,7 @@
 ---
 title: 'Productividad Developer en VS Code: Atajos, Extensiones y Trucos que realmente ahorran tiempo'
 pubDate: 2026-05-12T21:53:52.473Z
-heroImage: /src/assets/productividad developer.png
+heroImage: /src/assets/productividad-developer.png
 description: "Pequeños cambios en tu entorno pueden hacer una diferencia enorme en tu productividad. Estos son los atajos, extensiones y configuraciones de VS Code que más impacto tuvieron en mi día a día como developer. \U0001F4BB\U0001F525"
 ---
 
