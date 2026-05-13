@@ -1,7 +1,7 @@
 ---
 title: Configuración Pro de Git Bash y VS Code en Windows
 pubDate: 2026-05-11T03:00:00.000Z
-heroImage: /src/assets/wds-setup.png
+heroImage: /assets/wds-setup.png
 description: Cómo optimizar tu terminal y editor para desarrollar como una Full Stack sin morir en el intento.
 ---
 
